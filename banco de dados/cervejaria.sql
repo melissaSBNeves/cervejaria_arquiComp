@@ -21,3 +21,5 @@ maturacao FLOAT,
 pasteuriacao_rapida FLOAT,
 tunel_pasteurizacao FLOAT
 );
+
+select * from temperatura;
