@@ -62,7 +62,7 @@ const serial = async (
         const lm35Temperatura = parseFloat(valores[0]);
 
         valoresLm35Temperatura.push(lm35Temperatura);
-        
+
         var maceracao = lm35Temperatura - 12;
         var malteracao_etp1 = lm35Temperatura + 23;
         var malteracao_etp2 = lm35Temperatura + 45;
@@ -72,13 +72,13 @@ const serial = async (
         var brassagem_ept2 = lm35Temperatura + 35;
         var brassagem_ept3 = lm35Temperatura + 40;
         var fervura = lm35Temperatura + 74;
-        var resfiramento_etp1 = lm35Temperatura - 20
-        var resfriamento_etp2 = lm35Temperatura- 14
-        var resfriamento_etp3 = lm35Temperatura- 21
-        var filtragem = lm35Temperatura - 25
-        var pausterizaçao = lm35Temperatura + 40
-        var produto_final = lm35Temperatura - 20
-       
+        var resfiramento_etp1 = lm35Temperatura - 20;
+        var resfriamento_etp2 = lm35Temperatura - 14;
+        var resfriamento_etp3 = lm35Temperatura - 21;
+        var filtragem = lm35Temperatura - 25;
+        var pausterizaçao = lm35Temperatura + 40;
+        var produto_final = lm35Temperatura - 20;
+
 
 
         if (HABILITAR_OPERACAO_INSERIR) {
@@ -99,7 +99,7 @@ const serial = async (
                     conn.query(sqlquery);
                     console.log("valores inseridos no banco: ", maceracao + ", " + malteracao_etp1 + ", " + malteracao_etp2 + ", " + malteracao_etp3 + ", " + moagem + ", " + brassagem_ept1 + ", " + brassagem_ept2 + ", " + brassagem_ept3 + ", " + fervura + ", " + resfiramento_etp1 + ", " + resfriamento_etp2 + ", " + resfriamento_etp3 + ", " + filtragem + ", " + pausterizaçao + ", " + produto_final);
                 }
-                
+
 
                 sql.connect(connStr)
                     .then(conn => inserirComando(conn, sqlquery))
@@ -146,7 +146,7 @@ const servidor = (
     app.get('/sensores/lm35/temperatura', (_, response) => {
         return response.json(valoresLm35Temperatura);
     });
- 
+
 }
 
 (async () => {
