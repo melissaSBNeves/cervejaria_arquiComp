@@ -63,21 +63,21 @@ const serial = async (
 
         valoresLm35Temperatura.push(lm35Temperatura);
 
-        var maceracao = lm35Temperatura - 12;
-        var malteracao_etp1 = lm35Temperatura + 23;
-        var malteracao_etp2 = lm35Temperatura + 45;
-        var malteracao_etp3 = lm35Temperatura + 60;
-        var moagem = lm35Temperatura + 40;
-        var brassagem_ept1 = lm35Temperatura + 12;
-        var brassagem_ept2 = lm35Temperatura + 35;
-        var brassagem_ept3 = lm35Temperatura + 40;
-        var fervura = lm35Temperatura + 74;
-        var resfiramento_etp1 = lm35Temperatura - 20;
-        var resfriamento_etp2 = lm35Temperatura - 14;
-        var resfriamento_etp3 = lm35Temperatura - 21;
-        var filtragem = lm35Temperatura - 25;
-        var pausterizaçao = lm35Temperatura + 40;
-        var produto_final = lm35Temperatura - 20;
+        var maceracao = 1.22 * lm35Temperatura - 19.14;
+        var malteracao_etp1 = 0.81 * lm35Temperatura + 2.23;
+        var malteracao_etp2 = 2.04 * lm35Temperatura + 18.09;
+        var malteracao_etp3 = 6.14 * lm35Temperatura - 80.71;
+        var moagem = 4.09 * lm35Temperatura - 41.81;
+        var brassagem_ept1 = 2.04 * lm35Temperatura - 16.9;
+        var brassagem_ept2 = 6.14 * lm35Temperatura  - 100.71;
+        var brassagem_ept3 = 2.04 * lm35Temperatura + 10.09;
+        var fervura = 0.81 * lm35Temperatura + 79.23;
+        var resfiramento_etp1 = 2.04 * lm35Temperatura - 44.9;
+        var resfriamento_etp2 = 2.04 * lm35Temperatura - 39.9;
+        var resfriamento_etp3 = 0.81 * lm35Temperatura - 16.76;
+        var filtragem = 0.81 * lm35Temperatura - 20.76;
+        var pausterizaçao = 4.09 * lm35Temperatura - 43.81;
+        var produto_final = 2.04 * lm35Temperatura - 49.9;
 
 
 
